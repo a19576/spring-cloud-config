@@ -1,0 +1,15 @@
+server:
+  port: 8445
+
+spring:
+  application:
+    name: alarm
+
+  cloud:
+    config:
+      #uri: http://localhost:8888 # Use Eureka to discover Config Server
+      discovery:
+        enabled: true
+        serviceId: config-sercice
+      failFast: true #  fail startup of a service if it cannot connect to the Config Server     
+
